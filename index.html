@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Moje fotky</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    img { max-width: 400px; margin: 10px; display: block; }
+  </style>
+</head>
+<body>
+  <h1>Moje fotky</h1>
+  <div id="gallery"></div>
+
+  <script>
+    // Seznam obrázků – doplň názvy souborů, jak se jmenují v repozitáři
+    const photos = [
+      "PS-974408-Vitronic-2503211114_00448_0005_01-1.jpg",
+      "PS-974408-Vitronic-2503211114_00448_0005_01-1_lp.jpg",
+      "PS-974408-Vitronic-2503211114_00448_0005_01-2.jpg",
+      "PS-974408-Vitronic-2503211114_00448_0005_01-2_lp.jpg"
+    ];
+
+    const gallery = document.getElementById("gallery");
+    photos.forEach(file => {
+      const img = document.createElement("img");
+      img.src = file;
+      img.alt = file;
+      gallery.appendChild(img);
+    });
+  </script>
+</body>
+</html>
